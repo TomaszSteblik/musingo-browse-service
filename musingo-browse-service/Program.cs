@@ -1,4 +1,6 @@
 using MediatR;
+using MongoDB.Driver;
+using musingo_browse_service.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddScoped<IDiscRepository, DiscRepository>();
+builder.Services.AddSingleton<IMongoClient>(new MongoClient(builder.Configuration.GetConnectionString("mongoDb")));
 
 var app = builder.Build();
 
