@@ -5,8 +5,10 @@ namespace musingo_browse_service.Queries;
 
 public class GetDiscByIdQuery : IRequest<DiscReadDto>
 {
-    public GetDiscByIdQuery()
+    public Guid DiscId { get; set; }
+    
+    public GetDiscByIdQuery(Guid guid)
     {
-        throw new NotImplementedException();
+        DiscId = guid;
     }
 }
