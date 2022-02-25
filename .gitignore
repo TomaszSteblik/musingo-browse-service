@@ -1,0 +1,8 @@
+/.idea/
+/musingo-browse-service/obj/
+/musingo-browse-service/bin/
+/musingo-browse-service/.DS_STORE
+/musingo-browse-tests/obj/
+/musingo-browse-tests/bin/
+/musingo-browse-tests/.DS_STORE
+.DS_STORE
